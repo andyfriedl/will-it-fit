@@ -1,0 +1,58 @@
+export const products = [
+  {
+    productId: 66666666,
+    name: "test",
+    width: 50.25,
+    height: 2.75,
+    depth: 41.25,
+  },
+  {
+    productId: 60470408,
+    name: "NYSJÖN",
+    width: 20.25,
+    height: 2.75,
+    depth: 31.25,
+  },
+  {
+    productId: 20400323,
+    name: "SALJEN",
+    width: 10.75,
+    height: 2,
+    depth: 11.25,
+  },
+  {
+    productId: 50311066,
+    name: "FRIHETEN",
+    width: 32.75,
+    height: 16.5,
+    depth: 55,
+  },
+  {
+    productId: 40104294,
+    name: "LACK",
+    width: 11.25,
+    height: 2.5,
+    depth: 12.75,
+  },
+  {
+    productId: 20470047,
+    name: "TIPHEDE",
+    width: 16.75,
+    height: 3.5,
+    depth: 18.75,
+  },
+  {
+    productId: 10545500,
+    name: "TRÅDFRI",
+    width: 2,
+    height: 2,
+    depth: 4.5,
+  },
+  {
+    productId: 10423184,
+    name: "BERGPALM",
+    width: 7.25,
+    height: 4.5,
+    depth: 11,
+  },
+];
