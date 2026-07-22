@@ -15,11 +15,11 @@ export const homePage = {
       type: "richText",
       title: "How it works",
       html: `
-        <ol>
-          <li><strong>Select your vehicle</strong><br />Choose or save your car.</li>
-          <li><strong>Search for a product</strong><br />Find the item you want to check.</li>
-          <li><strong>Check the fit</strong><br />See whether it fits before you buy.</li>
-        </ol>
+       <ol>
+        <li><strong>Select your vehicle</strong><br />Choose the vehicle you want to check.</li>
+        <li><strong>Add products to your cart</strong><br />Search for products and add the ones you want to test.</li>
+        <li><strong>Check the fit</strong><br />See whether everything fits before you buy.</li>
+      </ol>
       `,
     },
   ],

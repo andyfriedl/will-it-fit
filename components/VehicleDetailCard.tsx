@@ -64,7 +64,7 @@ function handleUnselectVehicle() {
 
         <div className="card-footer">
           {isSelected ? (
-            <button className="card-action-secondary" onClick={handleUnselectVehicle}>
+            <button className="card-action-dark" onClick={handleUnselectVehicle}>
               Unselect Vehicle
             </button>
           ) : (
@@ -74,7 +74,7 @@ function handleUnselectVehicle() {
           )}
 
           {isSelected ? (
-            <Link className="card-action-dark" href="/fit-check">
+            <Link className="card-action-secondary" href="/fit-check">
                 Select Products →
             </Link>
           ) : (
