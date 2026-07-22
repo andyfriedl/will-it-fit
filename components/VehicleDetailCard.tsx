@@ -75,7 +75,7 @@ function handleUnselectVehicle() {
 
           {isSelected ? (
             <Link className="card-action-dark" href="/fit-check">
-                Will It Fit? →
+                Select Products →
             </Link>
           ) : (
             <button className="card-action-primary" onClick={handleSelectVehicle}>

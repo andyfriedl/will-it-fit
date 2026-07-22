@@ -23,7 +23,7 @@ export default function VehicleCard({
 
       <p>{description}</p>
 
-      <span className="card-action-primary action-space-top action-align-right" aria-hidden="true">
+      <span className="card-link-cue action-space-top action-align-right">
         View Vehicle →
       </span>
     </Card>

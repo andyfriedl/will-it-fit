@@ -6,7 +6,7 @@ import { vehicles } from "@/data/vehicles";
 export default function Vehicles() {
     return (
         <main>
-            <h1>Vehicles</h1>
+            <h2 className="inline-block bg-[var(--color-accent)] px-4 py-2">Select a vehicle</h2>
             {vehicles.map((vehicle) => {
               const slug = createVehicleSlug(
                 vehicle.year,

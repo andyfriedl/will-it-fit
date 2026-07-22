@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 
 const navLinks = [
   { label: "Start", href: "/" },
@@ -21,31 +23,41 @@ export default function Header() {
   });
 
   return (
-    <header>
-      <h2>Will It Fit?</h2>
+    <header className="sticky top-0 z-50">
+        <div className="flex items-center justify-between gap-6">
+        <div>
+          <h2>Will It Fit?</h2>
 
-      <nav>
-        {navLinks.map((link, index) => {
-          const isActive = index === activeIndex;
-          const isPast = index < activeIndex;
+          <nav>
+            {navLinks.map((link, index) => {
+              const isActive = index === activeIndex;
+              const isPast = index < activeIndex;
 
-          let className = "nav-link nav-link--future";
+              let className = "nav-link nav-link--future";
 
-          if (isPast) {
-            className = "nav-link nav-link--past";
-          }
+              if (isPast) {
+                className = "nav-link nav-link--past";
+              }
 
-          if (isActive) {
-            className = "nav-link nav-link--active";
-          }
+              if (isActive) {
+                className = "nav-link nav-link--active";
+              }
 
-          return (
-            <Link key={link.href} href={link.href} className={className}>
-              {link.label}
-            </Link>
-          );
-        })}
-      </nav>
+              return (
+                <Link key={link.href} href={link.href} className={className}>
+                  {link.label}
+                </Link>
+              );
+            })}
+          </nav>
+        </div>
+
+        <div className="cart-badge">
+          <FontAwesomeIcon className="pr-2" icon={faCartShopping} />
+          0
+        </div>
+
+      </div>
     </header>
   );
 }

@@ -5,8 +5,6 @@ import Card from "@/components/Card";
 import { vehicles } from "@/data/vehicles";
 import { createVehicleSlug } from "@/utils/utils";
 import { products } from "@/data/products";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 
 export default function FitCheckPage() {
     const [selectedVehicleSlug, setSelectedVehicleSlug] = useState("");
@@ -48,27 +46,24 @@ export default function FitCheckPage() {
     }
 
     return (
-        <main >
-            <h1>Will It Fit?</h1>
+        <main className="fit-check-page">
+            <h2 className="inline-block bg-[var(--color-accent)] px-4 py-2">
+                Select products to fit
+            </h2>
 
-            <Card>
-                <div className="card-header-row">
-                    <h2>Selected Vehicle</h2>
+            {selectedVehicle ? (
+            <p className="mt-4 mb-8 uppercase !font-normal">
+              <span className="font-black">Vehicle:</span>{" "}
+              {selectedVehicle.year} {selectedVehicle.make} {selectedVehicle.model}
+            </p>
+            
+            ) : (
+                <p className="mt-4 mb-8 font-black uppercase">
+                    No vehicle selected yet.
+                </p>
+            )}
 
-                    <div className="cart-badge">
-                        <FontAwesomeIcon icon={faCartShopping} />  {cartProducts.length}
-                    </div>
-                </div>
-
-                {selectedVehicle ? (
-                    <p>
-                        {selectedVehicle.year} {selectedVehicle.make}{" "}
-                        {selectedVehicle.model}
-                    </p>
-                ) : (
-                    <p>No vehicle selected yet.</p>
-                )}
-            </Card>
+            
 
             <Card variant="secondary">
                 <h2>Search for Products</h2>
